@@ -100,17 +100,29 @@ class _homescreenState extends State<homescreen> {
                         child: Material(
                           color: const Color.fromARGB(255, 222, 208, 160),
                           child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor: Colors.green),
                             onPressed: () {
                               Navigator.pushNamed(context, '/schedulescreen');
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
-                                Icon(Icons.schedule_outlined,
-                                    size: 50), // <-- Icon
+                                Icon(
+                                  Icons.schedule_outlined,
+                                  size: 50,
+                                  color: Colors.black,
+                                ), // <-- Icon
                                 Text("Schedule",
                                     style: TextStyle(
                                         fontSize: 15,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],
@@ -124,16 +136,31 @@ class _homescreenState extends State<homescreen> {
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 143, 192, 232),
-                          child: InkWell(
-                            splashColor: Colors.green,
-                            onTap: () {},
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 76, 175, 165)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
-                                Icon(Icons.question_mark, size: 50), // <-- Icon
+                                Icon(
+                                  Icons.question_mark,
+                                  size: 50,
+                                  color: Colors.black,
+                                ), // <-- Icon
                                 Text("Questions",
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 14,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],
@@ -147,20 +174,31 @@ class _homescreenState extends State<homescreen> {
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 201, 155, 200),
-                          child: InkWell(
-                            splashColor: Colors.green,
-                            onTap: () {},
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 160, 175, 76)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
                                 Icon(
                                   Icons.calendar_month,
                                   size: 50,
-                                  color: Colors.red,
+                                  color: Colors.black,
                                 ), // <-- Icon
                                 Text("Calender",
                                     style: TextStyle(
                                         fontSize: 15,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],
@@ -174,17 +212,28 @@ class _homescreenState extends State<homescreen> {
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 158, 210, 210),
-                          child: InkWell(
-                            splashColor: Colors.green,
-                            onTap: () {},
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 152, 92, 179)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/helpscreen');
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
                                 Icon(Icons.help_center_outlined,
-                                    size: 50), // <-- Icon
+                                    size: 50, color: Colors.black), // <-- Icon
                                 Text("Help",
                                     style: TextStyle(
                                         fontSize: 15,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],
@@ -198,17 +247,31 @@ class _homescreenState extends State<homescreen> {
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 152, 152, 198),
-                          child: InkWell(
-                            splashColor: Colors.green,
-                            onTap: () {},
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 175, 117, 76)),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
-                                Icon(Icons.menu_book_outlined,
-                                    size: 50), // <-- Icon
+                                Icon(
+                                  Icons.menu_book_outlined,
+                                  size: 50,
+                                  color: Colors.black,
+                                ), // <-- Icon
                                 Text("About",
                                     style: TextStyle(
                                         fontSize: 15,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],
@@ -222,16 +285,30 @@ class _homescreenState extends State<homescreen> {
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 155, 192, 144),
-                          child: InkWell(
-                            splashColor: const Color.fromARGB(255, 93, 184, 97),
-                            onTap: () {},
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 16),
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(20)),
+                                ),
+                                backgroundColor: Colors.green),
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/');
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: const <Widget>[
-                                Icon(Icons.announcement, size: 50), // <-- Icon
+                                Icon(
+                                  Icons.announcement,
+                                  size: 50,
+                                  color: Colors.black,
+                                ), // <-- Icon
                                 Text("Notice",
                                     style: TextStyle(
                                         fontSize: 15,
+                                        color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
                               ],

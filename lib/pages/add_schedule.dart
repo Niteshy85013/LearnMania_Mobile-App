@@ -1,31 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class addnotescreen extends StatefulWidget {
-  const addnotescreen({super.key});
+class addschedulescreen extends StatefulWidget {
+  const addschedulescreen({super.key});
 
   @override
-  State<addnotescreen> createState() => _addnotescreenState();
+  State<addschedulescreen> createState() => _addschedulescreenState();
 }
 
-class _addnotescreenState extends State<addnotescreen> {
-  final _courseController = TextEditingController();
+class _addschedulescreenState extends State<addschedulescreen> {
+  final _key = GlobalKey<FormState>();
+
   final _titleController = TextEditingController();
   final TextEditingController _date = TextEditingController();
+
   final _descriptionController = TextEditingController();
-  final _globalKey = GlobalKey<FormState>();
 
-  // Button modification
-  final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-    foregroundColor: Colors.black87,
-    backgroundColor: Colors.amber,
-    padding: const EdgeInsets.symmetric(horizontal: 16),
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(20)),
-    ),
-  );
-
-// Date Picker Work
+  // Date Picker Work
   final DateTime _dateTime = DateTime.now();
   void _setDatePicker() {
     showDatePicker(
@@ -49,9 +40,9 @@ class _addnotescreenState extends State<addnotescreen> {
       appBar: AppBar(
           automaticallyImplyLeading: false,
           elevation: 0.00,
-          title: const Text("Create your Notes Here.",
+          title: const Text("Create your Schedule Here.",
               style: TextStyle(
-                color: Colors.red,
+                color: Colors.green,
                 fontSize: 28,
                 fontWeight: FontWeight.bold,
               )),
@@ -65,63 +56,6 @@ class _addnotescreenState extends State<addnotescreen> {
               children: [
                 const SizedBox(
                   height: 10,
-                ),
-                // Container(
-                //   alignment: Alignment.centerLeft,
-                //   child: const SizedBox(
-                //     child: Text(
-                //       'Create your Notes here.',
-                //       style: TextStyle(
-                //         // decoration: TextDecoration.underline,
-                //         fontSize: 25,
-                //         fontWeight: FontWeight.bold,
-                //         color: Colors.blue,
-                //         fontFamily: "OpenSans Bold",
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: const SizedBox(
-                    child: Text("Course",
-                        style: TextStyle(fontSize: 23, color: Colors.black)),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  controller: _courseController,
-                  keyboardType: TextInputType.text,
-                  decoration: const InputDecoration(
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.black,
-                      ),
-                      borderRadius: BorderRadius.all(Radius.circular(20)),
-                    ),
-                    enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(20.0),
-                        ),
-                        borderSide: BorderSide(
-                          color: Colors.black,
-                        )),
-                    hintText: 'Enter your Course name',
-                  ),
-                  validator: ((value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please Enter course';
-                    }
-                    return null;
-                  }),
-                ),
-                const SizedBox(
-                  height: 20,
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
@@ -251,13 +185,13 @@ class _addnotescreenState extends State<addnotescreen> {
                           shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(Radius.circular(20)),
                           ),
-                          backgroundColor: Colors.orange,
+                          backgroundColor: Colors.amber,
                           foregroundColor: Colors.black),
                       onPressed: () {
                         // Navigator.pushNamed(context, '/dashboardscreen');
                       },
                       child: const Text(
-                        'Add Notes',
+                        'Add Schedule',
                         style: TextStyle(fontSize: 20),
                       )),
                 ),

@@ -96,6 +96,7 @@ class _profilescreenState extends State<profilescreen> {
                         title: Text('Nitesh Yadav',
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold)),
+                                
                       )
                     ],
                   ),

@@ -73,6 +73,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.0"
+  date_format:
+    dependency: "direct main"
+    description:
+      name: date_format
+      sha256: "8e5154ca363411847220c8cbc43afcf69c08e8debe40ba09d57710c25711760c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.7"
+  datepicker_cupertino:
+    dependency: "direct main"
+    description:
+      name: datepicker_cupertino
+      sha256: f8da2f21af9d9541a6f933dcd2d6a60b38dd7c948fce06a337bc3112480861c3
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.4"
+  datepicker_dropdown:
+    dependency: "direct main"
+    description:
+      name: datepicker_dropdown
+      sha256: "2dcc09b01c1bd58587bcc8b723bec93011da54e8c2c58004e5e41c32f7f363ca"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.7+3"
   fake_async:
     dependency: transitive
     description:
@@ -99,6 +123,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  intl:
+    dependency: "direct main"
+    description:
+      name: intl
+      sha256: "910f85bce16fb5c6f614e117efa303e85a1731bb0081edf3604a2ae6e9a3cc91"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.17.0"
   js:
     dependency: transitive
     description:
@@ -155,6 +187,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+  raised_buttons:
+    dependency: "direct main"
+    description:
+      name: raised_buttons
+      sha256: de567adf35617c541b8648af3497f38aeafbb5575afaf71cde7d8603838e0170
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.2"
   readmore:
     dependency: "direct main"
     description:

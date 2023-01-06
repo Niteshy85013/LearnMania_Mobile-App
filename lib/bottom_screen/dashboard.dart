@@ -23,11 +23,7 @@ class _dashboardscreenState extends State<dashboardscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: const Text('Dashboard'),
-      //   backgroundColor: Colors.deepOrange,
-      //   centerTitle: true,
-      // ),
+       
       body: lstBottomScreen[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -49,5 +45,6 @@ class _dashboardscreenState extends State<dashboardscreen> {
         },
       ),
     );
+    
   }
 }
