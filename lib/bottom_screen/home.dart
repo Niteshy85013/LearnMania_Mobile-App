@@ -11,25 +11,33 @@ class _homescreenState extends State<homescreen> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return SafeArea(
-      child: SingleChildScrollView(
+    return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(
+          "assets/images/mainlog.png",
+          width: 250,
+        ),
+        centerTitle: true,
+        automaticallyImplyLeading: false,
+        toolbarHeight: 155.2,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(25),
+              bottomLeft: Radius.circular(25)),
+        ),
+        elevation: 0.00,
+        backgroundColor: const Color.fromARGB(255, 75, 201, 147),
+        // actions: <Widget>[
+        //   Image.asset(
+        //     "assets/images/mainlog.png",
+        //     height: 300,
+        //     width: 350,
+        //   ),
+        // ],
+      ),
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              height: size.height * .20,
-              decoration: const BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(20.0),
-                    bottomRight: Radius.circular(20.0)),
-                color: Color.fromARGB(255, 75, 201, 147),
-                image: DecorationImage(
-                  scale: 1.4,
-                  image: AssetImage(
-                    "assets/images/mainlog.png",
-                  ),
-                ),
-              ),
-            ),
             const SizedBox(
               height: 20,
             ),
@@ -89,7 +97,7 @@ class _homescreenState extends State<homescreen> {
                 ],
               ),
               child: Padding(
-                padding: const EdgeInsets.all(12.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Wrap(
                   spacing: 20,
                   runSpacing: 20.0,
@@ -281,7 +289,7 @@ class _homescreenState extends State<homescreen> {
                       ),
                     ),
                     SizedBox.fromSize(
-                      size: const Size(100, 100),
+                      size: const Size(112, 112),
                       child: ClipOval(
                         child: Material(
                           color: const Color.fromARGB(255, 155, 192, 144),
@@ -293,7 +301,8 @@ class _homescreenState extends State<homescreen> {
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(20)),
                                 ),
-                                backgroundColor: Colors.green),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 168, 215, 169)),
                             onPressed: () {
                               Navigator.pushNamed(context, '/');
                             },
@@ -302,12 +311,12 @@ class _homescreenState extends State<homescreen> {
                               children: const <Widget>[
                                 Icon(
                                   Icons.announcement,
-                                  size: 50,
+                                  size: 40,
                                   color: Colors.black,
                                 ), // <-- Icon
-                                Text("Notice",
+                                Text("Announcement",
                                     style: TextStyle(
-                                        fontSize: 15,
+                                        fontSize: 19,
                                         color: Colors.black,
                                         fontWeight:
                                             FontWeight.bold)), // <-- Text
