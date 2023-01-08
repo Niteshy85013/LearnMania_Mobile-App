@@ -147,7 +147,7 @@ class _homescreenState extends State<homescreen> {
                                 backgroundColor:
                                     const Color.fromARGB(255, 76, 175, 165)),
                             onPressed: () {
-                              Navigator.pushNamed(context, '/');
+                              Navigator.pushNamed(context, '/questionsection');
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,

@@ -48,6 +48,9 @@ dependencies:
   raised_buttons: ^0.0.2
   date_format: ^2.0.7
   intl: ^0.17.0
+  google_nav_bar: ^5.0.6
+  line_icons: ^2.0.1
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:

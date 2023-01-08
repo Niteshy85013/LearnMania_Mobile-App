@@ -20,6 +20,7 @@ class _helpscreenState extends State<helpscreen> {
         ),
         title: const Text("Help and Support",
             style: TextStyle(color: Colors.black)),
+       
       ),
       body: SingleChildScrollView(
         child: Column(
