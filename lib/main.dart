@@ -5,6 +5,7 @@ import 'package:learnprac/pages/add_notes.dart';
 import 'package:learnprac/pages/add_schedule.dart';
 import 'package:learnprac/pages/help_section.dart';
 import 'package:learnprac/pages/question_section.dart';
+ 
 import 'package:learnprac/pages/splash_screen.dart';
 
 import 'Auth/sign_up.dart';
@@ -26,6 +27,7 @@ void main() {
         '/addnotescreen': (context) => const addnotescreen(),
         '/questionsection': (context) => const questionsection(),
         '/addschedulescreen': (context) => const addschedulescreen(),
+        
       },
     ),
   );

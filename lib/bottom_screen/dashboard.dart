@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:learnprac/bottom_screen/about.dart';
-import 'package:learnprac/bottom_screen/cart.dart';
+import 'package:learnprac/bottom_screen/notes.dart';
+import 'package:learnprac/bottom_screen/course.dart';
 import 'package:learnprac/bottom_screen/home.dart';
 import 'package:learnprac/bottom_screen/profile.dart';
 

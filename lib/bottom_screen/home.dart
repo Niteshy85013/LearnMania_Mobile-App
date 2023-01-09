@@ -39,11 +39,19 @@ class _homescreenState extends State<homescreen> {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Container(
-              alignment: Alignment.centerLeft,
               padding: const EdgeInsets.all(10),
+              decoration: const BoxDecoration(
+                  // color: Color.fromARGB(255, 121, 193, 156),
+                  // borderRadius: BorderRadius.only(
+                  //     topRight: Radius.circular(30),
+                  //     topLeft: Radius.circular(30)),
+                  ),
+              //
+              alignment: Alignment.centerLeft,
+
               child: RichText(
                 text: const TextSpan(children: [
                   TextSpan(
@@ -73,255 +81,147 @@ class _homescreenState extends State<homescreen> {
                 ]),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
             Container(
               padding: const EdgeInsets.all(10),
               alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color.fromARGB(255, 200, 154, 154)
-                        .withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3), // changes position of shadow
+              decoration: const BoxDecoration(
+                  // color: Color.fromARGB(255, 121, 193, 156),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: const Color.fromARGB(255, 200, 154, 154)
+                  //         .withOpacity(0.2),
+                  //     spreadRadius: 5,
+                  //     blurRadius: 7,
+                  //     offset: const Offset(0, 3), // changes position of shadow
+                  //   ),
+                  // ],
                   ),
-                ],
-              ),
               child: Padding(
-                padding: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(8.0),
                 child: Wrap(
-                  spacing: 20,
+                  spacing: 25,
                   runSpacing: 20.0,
                   children: <Widget>[
                     SizedBox.fromSize(
-                      size: const Size(100, 100),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 222, 208, 160),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor: Colors.green),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/schedulescreen');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.schedule_outlined,
-                                  size: 50,
-                                  color: Colors.black,
-                                ), // <-- Icon
-                                Text("Schedule",
+                      size: const Size(150, 150),
+                      child: Material(
+                        color: const Color.fromARGB(255, 222, 208, 160),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              backgroundColor: Colors.white),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/schedulescreen');
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Icon(
+                                Icons.schedule,
+                                size: 70,
+                                color: Color.fromARGB(255, 206, 86, 228),
+                              ), // <-- Icon
+                              Center(
+                                child: Text("Set Schedule ",
                                     style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black)),
+                              ), // <-- Text
+                            ],
                           ),
                         ),
                       ),
                     ),
                     SizedBox.fromSize(
-                      size: const Size(100, 100),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 143, 192, 232),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor:
-                                    const Color.fromARGB(255, 76, 175, 165)),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/questionsection');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.question_mark,
-                                  size: 50,
-                                  color: Colors.black,
-                                ), // <-- Icon
-                                Text("Questions",
-                                    style: TextStyle(
-                                        fontSize: 14,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
+                      size: const Size(150, 150),
+                      child: Material(
+                        color: const Color.fromARGB(255, 222, 208, 160),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              backgroundColor: Colors.white),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Icon(
+                                Icons.assignment,
+                                size: 70,
+                                color: Color.fromARGB(255, 206, 86, 228),
+                              ), // <-- Icon
+                              Text("Work",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black)), // <-- Text
+                            ],
                           ),
                         ),
                       ),
                     ),
                     SizedBox.fromSize(
-                      size: const Size(100, 100),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 201, 155, 200),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor:
-                                    const Color.fromARGB(255, 160, 175, 76)),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.calendar_month,
-                                  size: 50,
-                                  color: Colors.black,
-                                ), // <-- Icon
-                                Text("Calender",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
+                      size: const Size(150, 150),
+                      child: Material(
+                        color: const Color.fromARGB(255, 222, 208, 160),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shadowColor: Colors.amber,
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              backgroundColor: Colors.white),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/helpscreen');
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Icon(
+                                Icons.help_center,
+                                size: 70,
+                                color: Color.fromARGB(255, 206, 86, 228),
+                              ), // <-- Icon
+                              Text("Help",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black)), // <-- Text
+                            ],
                           ),
                         ),
                       ),
                     ),
                     SizedBox.fromSize(
-                      size: const Size(100, 100),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 158, 210, 210),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor:
-                                    const Color.fromARGB(255, 152, 92, 179)),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/helpscreen');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(Icons.help_center_outlined,
-                                    size: 50, color: Colors.black), // <-- Icon
-                                Text("Help",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox.fromSize(
-                      size: const Size(100, 100),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 152, 152, 198),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor:
-                                    const Color.fromARGB(255, 175, 117, 76)),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.menu_book_outlined,
-                                  size: 50,
-                                  color: Colors.black,
-                                ), // <-- Icon
-                                Text("About",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox.fromSize(
-                      size: const Size(112, 112),
-                      child: ClipOval(
-                        child: Material(
-                          color: const Color.fromARGB(255, 155, 192, 144),
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 16),
-                                shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(20)),
-                                ),
-                                backgroundColor:
-                                    const Color.fromARGB(255, 168, 215, 169)),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const <Widget>[
-                                Icon(
-                                  Icons.announcement,
-                                  size: 40,
-                                  color: Colors.black,
-                                ), // <-- Icon
-                                Text("Announcement",
-                                    style: TextStyle(
-                                        fontSize: 19,
-                                        color: Colors.black,
-                                        fontWeight:
-                                            FontWeight.bold)), // <-- Text
-                              ],
-                            ),
+                      size: const Size(150, 150),
+                      child: Material(
+                        // color: const Color.fromARGB(255, 240, 195, 49),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              shadowColor: Colors.amber,
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 16),
+                              backgroundColor: Colors.white),
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/');
+                          },
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Icon(
+                                Icons.message,
+                                size: 70,
+                                color: Color.fromARGB(255, 206, 86, 228),
+                              ), // <-- Icon
+                              Text("Announcement",
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black)), // <-- Text
+                            ],
                           ),
                         ),
                       ),
@@ -331,46 +231,49 @@ class _homescreenState extends State<homescreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 1,
             ),
             Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(10),
-                    topRight: Radius.circular(10),
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color.fromARGB(255, 200, 154, 154)
-                        .withOpacity(0.5),
-                    spreadRadius: 5,
-                    blurRadius: 7,
-                    offset: const Offset(0, 3), // changes position of shadow
+              decoration: const BoxDecoration(
+                  // color: Color.fromARGB(255, 121, 193, 156),
+                  // borderRadius: BorderRadius.only(
+                  //     topLeft: Radius.circular(10),
+                  //     topRight: Radius.circular(10),
+                  //     bottomLeft: Radius.circular(10),
+                  //     bottomRight: Radius.circular(10)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: const Color.fromARGB(255, 200, 154, 154)
+                  //         .withOpacity(0.5),
+                  //     spreadRadius: 5,
+                  //     blurRadius: 7,
+                  //     offset: const Offset(0, 3), // changes position of shadow
+                  //   ),
+                  // ],
                   ),
-                ],
-              ),
               child: Row(
                 children: [
                   Column(
                     children: [
                       Image.asset(
                         'assets/images/welcome.png',
-                        height: 145,
+                        height: 160,
                       ),
                     ],
                   ),
-                  Column(
-                    children: const [
-                      Text(
-                        'Checkout Our Courses.',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.red),
-                      )
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: const [
+                        Text(
+                          'Checkout Our Courses.',
+                          style: TextStyle(
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),
