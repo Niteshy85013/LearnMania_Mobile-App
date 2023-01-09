@@ -3,6 +3,8 @@ import 'package:learnprac/Auth/login_page.dart';
 import 'package:learnprac/bottom_screen/dashboard.dart';
 import 'package:learnprac/pages/add_notes.dart';
 import 'package:learnprac/pages/add_schedule.dart';
+import 'package:learnprac/pages/announcement.dart';
+import 'package:learnprac/pages/assignments.dart';
 import 'package:learnprac/pages/help_section.dart';
 import 'package:learnprac/pages/question_section.dart';
  
@@ -27,6 +29,8 @@ void main() {
         '/addnotescreen': (context) => const addnotescreen(),
         '/questionsection': (context) => const questionsection(),
         '/addschedulescreen': (context) => const addschedulescreen(),
+        '/announcescreen':(context) => const announcescreen(),
+        '/assignmentscreen':(context) => const assignmentscreen()
         
       },
     ),

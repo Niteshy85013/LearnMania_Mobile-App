@@ -144,7 +144,7 @@ class _homescreenState extends State<homescreen> {
                                   const EdgeInsets.symmetric(horizontal: 16),
                               backgroundColor: Colors.white),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, '/assignmentscreen');
                           },
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -206,7 +206,7 @@ class _homescreenState extends State<homescreen> {
                                   const EdgeInsets.symmetric(horizontal: 16),
                               backgroundColor: Colors.white),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(context, '/announcescreen');
                           },
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,

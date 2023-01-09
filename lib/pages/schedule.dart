@@ -22,42 +22,49 @@ class _schedulescreenState extends State<schedulescreen> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios_new,
+              color: Colors.black, size: 30),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        automaticallyImplyLeading: true,
         title: const Text(
           "Schedule Section",
-          style: TextStyle(fontSize: 30, color: Colors.black),
+          style: TextStyle(fontSize: 27, color: Colors.black),
         ),
+        centerTitle: true,
         toolbarHeight: 100.2,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.only(
               bottomRight: Radius.circular(25),
               bottomLeft: Radius.circular(25)),
         ),
-        elevation: 0.00,
-        backgroundColor: const Color.fromARGB(255, 122, 197, 212),
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(23.0),
-            child: ElevatedButton.icon(
-              onPressed: () {
-                Navigator.pushNamed(context, '/addschedulescreen');
-              },
-              icon: const Icon(Icons.add), //icon data for elevated button
-              label: const Text(
-                "Add Schedule",
-                style: TextStyle(fontSize: 16),
-              ), //label text
-              style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  shape: const RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(20)),
+            child: SizedBox.fromSize(
+              size: const Size(65, 65),
+              child: ClipOval(
+                child: Material(
+                  color: const Color.fromARGB(255, 231, 111, 81),
+                  child: InkWell(
+                    splashColor: Colors.green,
+                    onTap: () {},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        Icon(Icons.add, size: 54), // <-- Icon
+                        // <-- Text
+                      ],
+                    ),
                   ),
-                  backgroundColor: const Color.fromARGB(
-                      255, 231, 92, 127) //elevated btton background color
-                  ),
+                ),
+              ),
             ),
           ),
         ],
+        elevation: 0.00,
+        backgroundColor: const Color.fromARGB(255, 122, 197, 212),
       ),
       body: SingleChildScrollView(
         child: Column(
