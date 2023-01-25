@@ -171,9 +171,7 @@ class _profilescreenState extends State<profilescreen> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 104,
-              ),
+              
             ],
           ),
         ),

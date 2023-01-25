@@ -49,7 +49,9 @@ class _schedulescreenState extends State<schedulescreen> {
                   color: const Color.fromARGB(255, 231, 111, 81),
                   child: InkWell(
                     splashColor: Colors.green,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/addschedulescreen');
+                    },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[

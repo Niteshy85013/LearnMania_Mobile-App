@@ -36,7 +36,9 @@ class _aboutscreenState extends State<aboutscreen> {
                   color: const Color.fromARGB(255, 231, 111, 81),
                   child: InkWell(
                     splashColor: Colors.green,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushNamed(context, '/addnotescreen');
+                    },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const <Widget>[
